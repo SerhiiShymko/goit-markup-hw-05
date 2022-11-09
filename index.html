@@ -31,27 +31,27 @@
           <li class="item">
             <a class="header-list-link link" href="">Контакти</a>
           </li>
-          </ul>
-          </nav>
-          <ul class="header-contact list">
-            <li class="item">
-              <a class="contacts link" href="mailto:info@devstudio.com">
-                <svg class="icon" width="16" height="12">
-                  <use href="./images/icons.svg#mail"></use>
-                </svg>
-                <span>info@devstudio.com</span></a>
-            </li>
-            <li class="item">
-              <a class="contacts link" href="tel:+380961111111">
-                <svg class="icon" width="10" height="16">
-                  <use href="./images/icons.svg#smartphone"></use>
-                </svg>
-                <span>+38 096 111 11 11</span></a>
-            </li>
-          </ul>
-          </div>
-          </header>
-          <!-- Main -->
+        </ul>
+      </nav>
+      <ul class="header-contact list">
+        <li class="item">
+          <a class="contacts link" href="mailto:info@devstudio.com">
+            <svg class="icon" width="16" height="12">
+              <use href="./images/icons.svg#mail"></use>
+            </svg>
+            <span>info@devstudio.com</span></a>
+        </li>
+        <li class="item">
+          <a class="contacts link" href="tel:+380961111111">
+            <svg class="icon" width="10" height="16">
+              <use href="./images/icons.svg#smartphone"></use>
+            </svg>
+            <span>+38 096 111 11 11</span></a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <!-- Main -->
   <main>
     <!-- Hero -->
     <section class="section hero">
@@ -59,7 +59,17 @@
         <h1 class="hero-title">
           Ефективні рішення для вашого бізнесу
         </h1>
-        <button class="hero-button button" type="button">Замовити послугу</button>
+        <button class="hero-button button" type="button" data-modal-open>Замовити послугу</button>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <p></p>
+            <button class="close-button" type="button" data-modal-close>
+              <svg class="icon-close" width="18" height="18">
+                <use href="./images/icons.svg#modal-close"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
     <!-- Features-->
@@ -101,18 +111,27 @@
         </ul>
       </div>
     </section>
-    <!-- occupation -->
-    <section class="section occupation">
+    <!-- employ -->
+    <section class="section employ">
       <div class="container">
-        <h2 class="occupation-title">Чим ми займаємося</h2>
-        <ul class="occupation-list list">
-          <li class="item"><img src="./images/work-box1.jpg" alt="a programmer writes code" width="370"></li>
+        <h2 class="employ-title">Чим ми займаємося</h2>
+        <ul class="employ-list list">
+          <div class="employ-work-box">
+            <li class="item"><img src="./images/work-box1.jpg" alt="a programmer writes code" width="370"></li>
+            <h3 class="employ-work-title">Десктопні додатки</h3>
+          </div>
+          <div class="employ-work-box">
           <li class="item">
             <img src="./images/work-box2.jpg" alt="the programmer makes the markup" width="370">
           </li>
+            <h3 class="employ-work-title">Мобільні додатки</h3>
+          </div>
+          <div class="employ-work-box">
           <li class="item">
             <img src="./images/work-box3.jpg" alt="color selection on the tablet" width="370">
           </li>
+            <h3 class="employ-work-title">Дизайнерські рішення</h3>
+          </div>
         </ul>
       </div>
     </section>
@@ -129,7 +148,7 @@
               <ul class="social-list list">
                 <li class="social-item">
                   <a href="" class="social-link link">
-                  <svg class="social-icons" width="20" height="20">
+                    <svg class="social-icons" width="20" height="20">
                       <use href="./images/icons.svg#instagram"></use>
                     </svg>
                   </a>
@@ -289,7 +308,7 @@
               </svg>
             </a>
           </li>
-          </ul>
+        </ul>
       </div>
     </section>
   </main>
@@ -305,35 +324,37 @@
                 rel="noreferrer noopener nofollow">
                 м. Київ, пр-т Лесі Українки, 26</a>
             </li>
-            <li class="footer-item"><a class="footer-contacts link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+            <li class="footer-item"><a class="footer-contacts link"
+                href="mailto:info@devstudio.com">info@devstudio.com</a></li>
             <li class="footer-item"><a class="footer-contacts link" href="tel:+380961111111">+38 096 111 11 11</a></li>
           </ul>
-          </address>
+        </address>
       </div>
       <div class="join-box">
-          <h2 class="join-title">приєднуйтесь</h2>
-          <ul class="footer-join list">
-            <li class="social-item"><a href="" class="social-link link"><svg class="social-icons" width="20" height="20">
-                  <use href="./images/icons.svg#instagram"></use>
-                </svg>
-              </a></li>
-            <li class="social-item"><a href="" class="social-link link"><svg class="social-icons" width="20" height="20">
-                  <use href="./images/icons.svg#twitter"></use>
-                </svg>
-              </a></li>
-            <li class="social-item"><a href="" class="social-link link"><svg class="social-icons" width="20" height="20">
-                  <use href="./images/icons.svg#facebook"></use>
-                </svg>
-              </a></li>
-            <li class="social-item"><a href="" class="social-link link"><svg class="social-icons" width="20" height="20">
-                  <use href="./images/icons.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+        <h2 class="join-title">приєднуйтесь</h2>
+        <ul class="footer-join list">
+          <li class="social-item"><a href="" class="social-link link"><svg class="social-icons" width="20" height="20">
+                <use href="./images/icons.svg#instagram"></use>
+              </svg>
+            </a></li>
+          <li class="social-item"><a href="" class="social-link link"><svg class="social-icons" width="20" height="20">
+                <use href="./images/icons.svg#twitter"></use>
+              </svg>
+            </a></li>
+          <li class="social-item"><a href="" class="social-link link"><svg class="social-icons" width="20" height="20">
+                <use href="./images/icons.svg#facebook"></use>
+              </svg>
+            </a></li>
+          <li class="social-item"><a href="" class="social-link link"><svg class="social-icons" width="20" height="20">
+                <use href="./images/icons.svg#linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </footer>
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>
