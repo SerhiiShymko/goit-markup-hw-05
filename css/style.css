@@ -218,7 +218,7 @@ display: block;
 .button:focus,
 .button:hover {
   background-color: var(--activ);
-  /* transition: background-color 250ms var(--timings); */
+
 }
 
 .hero-button {
@@ -244,6 +244,8 @@ display: block;
 /* Модальне вікно */
 .backdrop {
   position: fixed;
+ 
+
   top: 0;
   left: 0;
   width: 100%;
@@ -271,6 +273,8 @@ display: block;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  
 }
 
 .modal .close-button {
@@ -355,8 +359,6 @@ display: block;
 }
 
 .employ-work-title .title{
-  position: absolute;
-    
   font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -387,12 +389,12 @@ display: block;
 
 .employ-list .item {
   position: relative;
+ 
+
   flex-basis: calc((100% - 3 * var(--gap)) / 3);
   margin-left: var(--gap);
 }
-/* .employ-thumb {
-  position: relative;
-} */
+
 
 /* team */
 .team {
@@ -490,8 +492,7 @@ display: block;
 .social-list .social-link:focus {
   background-color: var(--accent-color);
   color: var(--main-white-color);
-  /* transition: background-color 2500ms var(--timings),
-                color 2500ms var(--timings); */
+  outline: none;
 }
 
 /* клієнти */
@@ -691,8 +692,6 @@ display: block;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  /* transition: color 250ms var(--timings), background-color 250ms var(--timings),
-    box-shadow 250ms var(--timings), border-radius 250ms var(--timings); */
 }
 
 .portfolio-button {
@@ -726,17 +725,54 @@ display: block;
   margin-top: calc(-1 * var(--gap));
 }
 
-.card-item {
-  flex-basis: calc((100% - 3 * var(--gap)) / 3);
-  margin-left: var(--gap);
-  margin-top: var(--gap);
 
-  background: var();
-  border: 1px solid #eeeeee;
+.card-item {
+    flex-basis: calc((100% - 3 * var(--gap)) / 3);
+    margin-left: var(--gap);
+    margin-top: var(--gap);
+
+    background: var(--main-white-color);
+    border: 1px solid #eeeeee;
 
   transition: background-color 250ms var(--timings), border 250ms var(--timings),
     box-shadow 250ms var(--timings);
 }
+
+.card-thumb {
+    position: relative;
+}
+
+.card-item .card-thumb::before {
+    display: inline-block;
+    position: absolute;
+    
+    content: '';
+    width: 100%;
+    height: 100%;
+    
+    opacity: 0;
+    background-color: rgba(33, 150, 243, 0.9);
+
+    transition: background-color 250ms var(--timings);
+}
+
+.card-item .card-thumb:hover::before {
+    opacity: 1;
+}
+
+/* .card-description {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: calc(28 / 18);
+    letter-spacing: 0.03em;
+    color: #FFFFFF
+} */
 
 .card-content {
   padding: 20px 24px;
@@ -764,6 +800,5 @@ display: block;
   border: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  /* transition: background-color 250ms var(--timings), border 250ms var(--timings),
-    box-shadow 250ms var(--timings); */
+ 
 }
