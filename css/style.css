@@ -251,7 +251,7 @@ display: block;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 
-  transition: opacity 250ms var(--timings), visibility 250ms var(--timings);
+  transition: opacity 500ms, visibility 500ms;
 }
 
 .backdrop.is-hidden .modal {
