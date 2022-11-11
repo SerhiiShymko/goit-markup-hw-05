@@ -256,6 +256,8 @@ display: block;
 
 .backdrop.is-hidden .modal {
   transform: rotate(-180deg);
+  /* transform: scale(0.1); */
+  transform-origin: top right;
 }
 
 .backdrop.is-hidden {
@@ -274,6 +276,7 @@ display: block;
 
   width: 528px;
   height: 581px;
+  padding: 8px;
 
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -284,15 +287,14 @@ display: block;
 }
 
 .modal .close-button {
-  position: absolute;
-  right: 8px;
-  top: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
 
   width: 30px;
   height: 30px;
+  margin-left: auto;
+  
 
   cursor: pointer;
   border-radius: 50%;
